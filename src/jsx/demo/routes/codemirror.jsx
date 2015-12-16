@@ -95,52 +95,69 @@ render() {
               <Col xs={12}>
                 <Form>                            
                   <FormGroup>
-                    <Col sm={2}>
-                      <Label htmlFor='multiselect'>Status</Label>
-                      <Select id='multiselect' multiple>
-                        <option value='1'>Upcoming</option>
-                        <option value='2'>Running</option>
-                        <option value='3'>Finished</option>
-                      </Select>
-                    </Col>
-                    <Col sm={6} >
-                    <Label style={{textAlign: 'center', fontSize: '1.5em'}}>Select a date range</Label>
-                      <div style={{display: 'flex'}}>
-                        <CalendarInput id="datetimepicker1-parent" />
-                        <CalendarInput id="datetimepicker2-parent" />
-                      </div>
-                    </Col>
-                    <Col sm={2} style={{padding: 0}}>
-                      <Label style={{fontSize: '1em', marginBottom: 30}}>Condition(s)</Label>
-                      <Checkbox value='option1' name='horizontal-checkbox-options'>
-                        Pre-Hypertension
-                      </Checkbox>
-                      <Checkbox value='option2' defaultChecked name='horizontal-checkbox-options'>
-                        Hypertension
-                      </Checkbox>
-                      <Checkbox value='option3' disabled name='horizontal-checkbox-options'>
-                        Pre-Diabetic
-                      </Checkbox>
-                      <Checkbox value='option1' name='horizontal-checkbox-options'>
-                        Diabetic
-                      </Checkbox>
-                    </Col>
-                    <Col sm={2} style={{paddingRight: 0}}>
-                      <Button lg style={{marginBottom: 5}} bsStyle='primary'>Create campaign</Button>{' '}
-                      <Checkbox value='option1' name='horizontal-checkbox-options'>
-                        Diabetic - Oral medication
-                      </Checkbox>
-                      <Checkbox value='option2' defaultChecked name='horizontal-checkbox-options'>
-                        Diabetic - Insulin injection
-                      </Checkbox>
-                      <Checkbox value='option3' disabled name='horizontal-checkbox-options'>
-                        Overweight
-                      </Checkbox>
-                      <Checkbox value='option1' name='horizontal-checkbox-options'>
-                        Obese
-                      </Checkbox>
-                    </Col>
-                    <hr/>
+										<Row style={{display: 'flex', alignItems: 'flex-end', width: '100%'}}>
+											<Col sm={2}>
+												<Label htmlFor='multiselect' >Status</Label>
+											</Col>
+											<Col sm={6} >
+												<Label style={{textAlign: 'center'}}>Select a date range</Label>
+											</Col>
+											<Col sm={2} >
+												<Label >Condition(s)</Label>
+											</Col>
+											<Col sm={2} style={{paddingRight: 0}}>
+												<Button lg bsStyle='primary'>Create campaign</Button>{' '}
+											</Col>
+										</Row>
+
+										<Row>
+											<Col sm={2}>
+												<Checkbox value='option1' name='horizontal-checkbox-options'>
+													Upcoming
+												</Checkbox>
+												<Checkbox value='option2' defaultChecked name='horizontal-checkbox-options'>
+													Running
+												</Checkbox>
+												<Checkbox value='option3' disabled name='horizontal-checkbox-options'>
+													Finished
+												</Checkbox>
+											</Col>
+											<Col sm={6} >
+												<div style={{display: 'flex', marginTop: '-9px'}}>
+													<CalendarInput id="datetimepicker1-parent" />
+													<CalendarInput id="datetimepicker2-parent" />
+												</div>
+											</Col>
+											<Col sm={2} style={{padding: 0}}>
+												<Checkbox value='option1' name='horizontal-checkbox-options'>
+													Pre-Hypertension
+												</Checkbox>
+												<Checkbox value='option2' defaultChecked name='horizontal-checkbox-options'>
+													Hypertension
+												</Checkbox>
+												<Checkbox value='option3' disabled name='horizontal-checkbox-options'>
+													Pre-Diabetic
+												</Checkbox>
+												<Checkbox value='option1' name='horizontal-checkbox-options'>
+													Diabetic
+												</Checkbox>
+											</Col>
+											<Col sm={2} style={{paddingRight: 0}}>
+												<Checkbox value='option1' name='horizontal-checkbox-options'>
+													Diabetic - Oral medication
+												</Checkbox>
+												<Checkbox value='option2' defaultChecked name='horizontal-checkbox-options'>
+													Diabetic - Insulin injection
+												</Checkbox>
+												<Checkbox value='option3' disabled name='horizontal-checkbox-options'>
+													Overweight
+												</Checkbox>
+												<Checkbox value='option1' name='horizontal-checkbox-options'>
+													Obese
+												</Checkbox>
+											</Col>
+											<hr/>
+										</Row>
                   </FormGroup>
                 </Form>
               </Col>

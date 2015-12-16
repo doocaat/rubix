@@ -26,7 +26,7 @@ class ApplicationSidebar extends React.Component {
       
                   <SidebarNavItem glyph='icon-fontello-award' name='Rewards' href='/app/editor'  style={{marginTop: 20, marginBottom: 20, height: 70, fontSize: '1.2em'}}/>
                   <SidebarNavItem glyph='icon-fontello-chat-empty' name='Communications' href='/app/calendar'  style={{marginTop: 20, marginBottom: 20, height: 70, fontSize: '1.2em'}}/>
-                  <SidebarNavItem glyph='icon-fontello-wrench' name='Support' href='/app/calendar'  style={{marginTop: 20, marginBottom: 20, height: 70, fontSize: '1.2em'}}/>     
+                  <SidebarNavItem glyph='icon-fontello-wrench' name='Support' href='/'  style={{marginTop: 20, marginBottom: 20, height: 70, fontSize: '1.2em'}}/>     
 
                 </SidebarNav>
 

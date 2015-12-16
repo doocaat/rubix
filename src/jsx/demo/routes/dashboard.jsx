@@ -310,10 +310,10 @@ class ActiveUsersPanel extends React.Component {
   render() {
     return (
       <Row className='bg-green fg-lightgreen'>
-        <Col xs={6} xm={12}>
+        <Col lg={8} xm={12}>
           <h3>Adoption rate</h3>
         </Col>
-        <Col xs={6} className='text-right'>
+        <Col lg={4} className='text-right'>
           <h2 className='fg-lightgreen'>76%</h2>
         </Col>
       </Row>
@@ -661,12 +661,13 @@ class ContactListPanel extends React.Component {
 class TicketsPanel extends React.Component {
   componentDidMount() {
     var ticketsCleared = Rubix.Donut('#tickets-cleared', {
-      title: 'Population Health Status',
+//      title: 'Population Health Status',
 //      subtitle: 'by agents',
-      titleColor: '#EBA068',
+//      titleColor: '#EBA068',
 //      subtitleColor: '#EBA068',
       hideLegend: true,
-      height: 300,
+      height: 250,
+      width: 250,
       tooltip: {
         color: '#EBA068'
       }
@@ -998,13 +999,15 @@ class Body extends React.Component {
                           <h4 style={{marginTop: 0}}>OVERVIEW</h4>
  
                           <Panel horizontal className='force-collapse'>
-                            <PanelBody className='panel-sm-4' style={{padding: 0}}>
+                            <PanelBody className='panel-lg-5' style={{padding: 0}}>
                               <Grid>
+				<Row style={{display: 'flex', justifyContent: 'center', fontFamily: "Lato, 'Lucida Grande', Arial, Helvetica, sans-serif", textAlign: 'center', fontWeight: 'bold', fontSize: '16px', color: 'rgb(235, 160, 104)', cursor: 'default', marginTop: 10}}>
+                                  <caption style={{textAlign: 'center'}}><b>Population Health Status</b></caption>
+				</Row>
                                 <Row>
-                                  <Col xs={6} collapseLeft collapseRight>
+                                  <Col lg={6} collapseLeft collapseRight style={{marginTop: '20px', paddingLeft: '30px'}}>
                                     <div> 
                                       <table style={{width: '80%'}}>
-                                        <caption style={{textAlign: 'center'}}><b>Population</b></caption>
                                         <tbody>
                                           <tr><td>Normal</td><td style={{textAlign: 'right'}}>25%</td></tr>
                                           <tr><td>Pre-Hypertension</td><td style={{textAlign: 'right'}}>15%</td></tr>
@@ -1017,16 +1020,16 @@ class Body extends React.Component {
                                       </table>
                                     </div>
                                   </Col>
-                                  <Col xs={6} collapseLeft collapseRight>
+                                  <Col lg={6} collapseLeft collapseRight style={{marginTop: '-20px'}}>
                                     <TicketsPanel /> 
                                   </Col>
                                 </Row>
                               </Grid>
                             </PanelBody>
-                            <PanelRight noRadius className='bg-lightgreen fg-white panel-sm-2'>
+                            <PanelRight noRadius className='bg-lightgreen fg-white panel-lg-2'>
                               <UserStatsPanel />
                             </PanelRight>
-                            <PanelRight className='bg-green fg-green panel-sm-4'>
+                            <PanelRight className='bg-green fg-green panel-lg-4'>
                               <Grid>
                                 <ActiveUsersPanel  />
                                 <AlertChart />
@@ -1043,7 +1046,7 @@ class Body extends React.Component {
       
               <PanelContainer>
                 <Panel>
-                  <PanelBody>
+                  <PanelBody style={{paddingBottom: 25}}>
                     <Grid>
                       <Row>
                         <Col xs={12}>
@@ -1055,61 +1058,6 @@ class Body extends React.Component {
                   </PanelBody>
                 </Panel>
               </PanelContainer>
-            </Col>
-          </Row>
-
-          <Row>
-            <Col sm={5} collapseRight>
-              <PanelContainer>
-                <Panel>
-                  <PanelBody style={{padding: 0}}>
-                    <Grid>
-                      <Row>
-                        <Col xs={12} className='text-center' style={{padding: 25}}>
-                          <RadarChartPanel />
-                        </Col>
-                      </Row>
-                    </Grid>
-                  </PanelBody>
-                </Panel>
-              </PanelContainer>
-
-              <PanelContainer controlStyles='bg-lightorange fg-davygray' collapseBottom>
-                <Panel>
-                  <PanelHeader className='bg-lightorange fg-darkorange fg-tab-active tabs'>
-                    <TabContainer id='tab-2'>
-                      <TabList>
-                        <Tab active>
-                          <Icon className='icon-1-and-quarter-x' bundle='feather' glyph='bar-graph-2'/>
-                        </Tab>
-                        <Tab>
-                          <Icon className='icon-1-and-quarter-x' glyph='icon-simple-line-icons-users'/>
-                        </Tab>
-                        <Tab>
-                          <Icon className='icon-1-and-quarter-x' bundle='feather' glyph='pie-graph'/>
-                        </Tab>
-                      </TabList>
-                    </TabContainer>
-                  </PanelHeader>
-                  <PanelBody style={{paddingTop: 0}}>
-                    <TabContent tabContainerID='tab-2'>
-                      <TabPane>
-                        <OrdersComparisonPanel />
-                      </TabPane>
-                      <TabPane>
-                        <ContactListPanel />
-                      </TabPane>
-                      <TabPane>
-                        <TicketsPanel />
-                      </TabPane>
-                    </TabContent>
-                  </PanelBody>
-                </Panel>
-              </PanelContainer>
-            </Col>
-            <Col sm={7}>
-              <WeatherPanel />
-              <MapPanel />
             </Col>
           </Row>
         </Grid>

@@ -394,7 +394,7 @@ var HeaderNavigation = React.createClass({
         <Nav className='hidden-xs'>
 
           <NavItem divider />
-          <NavItem dropdown toggleOnHover className='small-font collapse-left' style={{paddingSize: 25}}>
+          <NavItem dropdown toggleOnHover className='small-font collapse-left' style={{paddingLeft: 25}}>
             <DropdownButton nav>
               <Icon bundle='fontello' glyph='mail-3' />
             </DropdownButton>
@@ -629,7 +629,7 @@ export default class Header extends React.Component {
                     <SidebarBtn />
                   </Col>
                   <Col xs={6} sm={6}>
-                    <div style={{fontSize: '1.5em', padding: '0.5em'}}> Health Management System</div>
+                    <div style={{fontSize: '2em', padding: '0.5em'}}> Health Management System</div>
                   </Col>
                   <Col xs={3} sm={6}>
                     <HeaderNavigation pressed={this.props.pressed} />

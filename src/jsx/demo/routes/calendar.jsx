@@ -20,7 +20,7 @@ class AlertsTable extends React.Component {
     return (  
       <PanelContainer>
         <Panel>
-          <PanelBody>
+          <PanelBody style={{paddingBottom: 25}}>
             <Grid>
               <Row>
                 <Col xs={12}>
